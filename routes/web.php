@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/reinaldo/{id}', function($id) {
+   return 'Reinaldo'.' '.$id;
+});
+
+// Route::get('/movie','MovieController@index');
+// mirip fungsi seperti route di hmp
+Route::resource('/movie','MovieController');
